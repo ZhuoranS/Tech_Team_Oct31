@@ -58,11 +58,13 @@
 
     attendance_list = ["Andrew Su"];
     attendance_list.push("Tony Luo");
+    // Add a line 
+    // attendance_list.push("Your Name Here");
 
     // selecting the attendance list element
     ol = document.getElementById("attendance");
     // looping through the attendance list, populate with list item elements of names in attendance list.
-    for (let i of attendance_list){
+    for (let i of attendance_list) {
       let li = document.createElement("li");
       li.innerHTML = i;
       ol.appendChild(li);
@@ -80,6 +82,20 @@
     console.log(web3.eth.defaultAccount);
     // Set Contract Abi
     var contractAbi = [
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "candidateName",
+        "outputs": [
+          {
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
       {
         "constant": false,
         "inputs": [
@@ -99,25 +115,10 @@
         "payable": false,
         "stateMutability": "nonpayable",
         "type": "constructor"
-      },
-      {
-        "constant": true,
-        "inputs": [],
-        "name": "candidateName",
-        "outputs": [
-          {
-            "name": "",
-            "type": "string"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
       }
     ];
-
     // Set Contract Address
-    var contractAddress = '0x68436Ce2aB3E80741de7Be19EEE6a89495295733'; // Add Your Contract address here!!!
+    var contractAddress = '0x6d6197a96f6439dDD4abc289bAcf9ae5e142F053'; // Add Your Contract address here!!!
 
     // Set the Contract
     var contract = web3.eth.contract(contractAbi).at(contractAddress);
@@ -134,7 +135,7 @@
     $('form').on('submit', function (event) {
       console.log($('input').val());
       event.preventDefault();
-      location.reload();
+      // location.reload();
       contract.setCandidate($('input').val());
       contract.candidateName(function (err, candidateName) {
         console.log(candidateName);
