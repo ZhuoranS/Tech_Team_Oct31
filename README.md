@@ -1,7 +1,13 @@
-# Build a Dapp in 20 Minutes
+# Blockchain Group Technical Team Onboarding Session III
 
-Here are the tools we'll use in this tutorial:
-1. Web3 JS - enables client side app to talk to blockchain
-2. Metamask - enables browser to talk to blockchain
-3. Ganache - local development blockchain
-4. Remix - smart contract IDE
+Happy Halloween!
+Here are the tools we'll use for today:
+1. Github - useful whenever you are collaborating with people on coding projects!
+2. Metamask - enables browser to talk to blockchain.
+   1. Make sure you have some assets in Rinkeby test network. (https://faucet.rinkeby.io/)
+3. Remix - smart contract IDE
+
+We will help you onboard and prepare you for:
+1. Github workflow: clone a repo, change contents, and push updates as your first contribution!
+2. Remix workflow: learn how to deploy a smart contract locally!
+3. Time permits, we will
