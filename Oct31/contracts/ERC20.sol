@@ -19,9 +19,13 @@ interface IERC20 {
 
 contract ERC20Basic is IERC20 {
 
+    // Your token name
     string public constant name = "TonyToken";
+    // Your token symbol
     string public constant symbol = "Tony";
+    // Decimal; how many parts 1 of your token can be splitted into
     uint8 public constant decimals = 18;
+    // Total supply of your token
     uint256 totalSupply_ = 10000 ether;
 
     mapping(address => uint256) balances;
